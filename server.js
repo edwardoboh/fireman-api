@@ -22,12 +22,6 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true , useUnifiedTopo
     return console.log("Unable to connect to Database")
 })
 
-
-
-app.get("/", (req, res) => {
-    res.status(200).send("Hello World")
-})
-
 if(process.env.NODE_ENV === "production"){
     app.use("/home", express.static("client/public"))
 
