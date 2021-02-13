@@ -28,6 +28,10 @@ const DeviceSchema = new Schema({
         type: String,
         required: true
     },
+    ownerPhone: {
+        type: String,
+        required: true
+    },
     dateAdded: {
         type: Date,
         default: Date.now()

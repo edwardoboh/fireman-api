@@ -47,6 +47,7 @@ router.post('/', (request, response) => {
         deviceName: request.body.deviceName,
         ownerId: request.body.ownerId, //GET the user id and enter it here.
         ownerName: request.body.ownerName,
+        ownerPhone: request.body.ownerPhone,
         longitude: request.body.longitude,
         latitude: request.body.latitude,
         address: request.body.address,

@@ -34,7 +34,7 @@ const Login = (props) => {
         if(userState.isAuthenticated){
             history.push("/dashboard")
             toggleModal()
-            console.log(userState)
+            // console.log(userState)
         }else{
             console.log("Authentication Failed")
         }

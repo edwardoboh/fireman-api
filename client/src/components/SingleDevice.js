@@ -21,7 +21,7 @@ import {deleteDevice} from '../actions/deviceActions'
 import MoreDetails from './MoreDetails'
 
 function SingleDevice(props) {
-    const {deviceName, longitude, latitude, ownerId, deviceState, _id, address, ownerName} = props.device
+    const {deviceName, longitude, latitude, ownerId, deviceState, _id, address, ownerName, ownerPhone} = props.device
     
     // const {initialUser, UserReducer} = useContext(UserContext)
     // const [userState, userDispatch] = useReducer(UserReducer, initialUser)
@@ -62,7 +62,7 @@ function SingleDevice(props) {
                 <Badge color={ deviceState? "danger" : "success"} className="ml-2">{deviceState ? 1 : 0}</Badge>
             </CardTitle>
             <span><CardText>Owner: {ownerName}</CardText></span>
-            <span><CardText>Phone: {phone}</CardText></span>
+            <span><CardText>Phone: {ownerPhone}</CardText></span>
             <span><CardText>Address: {address}</CardText></span>
             <CardLink href={`/more`} className="ml-auto" onClick={setMoreDetails}>Show More</CardLink>
         </Card>

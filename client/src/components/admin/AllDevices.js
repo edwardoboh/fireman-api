@@ -59,9 +59,10 @@ const AllDevices = (props) => {
                         address: address,
                         deviceState: fire,
                         ownerId: user._id,
-                        ownerName: user.fullName
+                        ownerName: user.fullName,
+                        ownerPhone: user.phone
                     }
-            console.log(newDevice)
+            // console.log(newDevice)
             addDevice({device: newDevice, dispatch})
             clearAllStates()
             toggle()
